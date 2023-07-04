@@ -1,0 +1,16 @@
+﻿@model Recomendation.Models.Gardering
+
+<h2>Редактирование пользователя</h2>
+<form asp-action="edit" asp-controller="home" asp-route-id="@Model.Id">
+    <p>
+        <label asp-for="NameVegetable">Имя</label><br />
+        <input type="text" asp-for="NameVegetable" />
+    </p>
+    <p>
+        <label asp-for="Planting">Возраст</label><br />
+        <input type="number" asp-for="Planting" />
+    </p>
+    <p>
+        <input type="submit" value="Сохранить" />
+    </p>
+</form>

@@ -1,0 +1,40 @@
+﻿@model Recomendation.Models.KitchenGargen
+
+<h2>Добавление пользователя</h2>
+<form asp-action="create" asp-controller="home">
+   @* <p>
+        <label asp-for="VegetableName">Овощ</label><br />
+        <input type="text" asp-for="VegetableName" />
+    </p>*@
+    <p>
+        <label asp-for="InfoGarderingId">Овощ</label>
+        <select asp-for="InfoGarderingId"  asp-items=" ViewBag.InfoGardering"></select>
+      @*  <option selected="selected" disabled="disabled">Выберите овощные культуры</option>*@
+    </p>
+  
+
+    <p>
+        <label asp-for="Planting">Дата посадки</label><br />
+        <input type="date"  asp-for="Planting" />
+        <option selected="selected" disabled="disabled"></option>
+    </p>
+    <p>
+        <label asp-for="Watering">Дата полива</label><br />
+        <input type="date" asp-for="Watering" />
+    </p>
+    <p>
+        <label asp-for="Hoeing">Дата окучивания</label><br />
+        <input type="date" asp-for="Hoeing" />
+    </p>
+    <p>
+        <label asp-for="loosening">Дата рыхления</label><br />
+        <input type="date" asp-for="loosening" />
+    </p>
+    <p>
+        <label asp-for="Weeding">Дата прополки </label><br />
+        <input type="date" asp-for="Weeding" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>

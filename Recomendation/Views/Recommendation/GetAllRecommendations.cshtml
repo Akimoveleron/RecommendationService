@@ -1,0 +1,10 @@
+﻿@model Recomendation.Models.KitchenGargen
+
+<h2>Рекомендации</h2>
+<div>
+    
+    @foreach (var item in ViewBag.result)
+    {
+        <div> @item</div>
+    }
+</div>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Recomendation.Models.KitchenGargen>
+
+<h2>Список овощей</h2>
+<p><a asp-action="Create">Добавить овощ в огород </a></p>
+<table class="table">
+    <tr><th>Название овоща</th><th>Дата посадки</th><th>Дата полива</th><th>Дата окучивания</th><th>Дата рыхления</th><th>Дата прополки</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.VegetableName</td>
+            <td>@item.Planting</td>
+            <td>@item.Watering</td>
+            <td>@item.Hoeing</td>
+            <td>@item.loosening</td>
+            <td>@item.Weeding</td>
+        </tr>
+    }
+</table>
+
+<form asp-action="GetAllRecommendations" asp-controller="Recommendation">
+ 
+    <p>
+        <input type="submit" value="РЕКОМЕНДАЦИИ" />
+    </p>
+</form>
+
+
